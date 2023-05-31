@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 7860
 
 # Run the application
-CMD ["python3", "filename.py"]
+CMD ["python3", "spanishtutor.py"]
