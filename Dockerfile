@@ -14,7 +14,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Expose the port on which the application runs
-EXPOSE 7860
+EXPOSE 8000
 
 # Run the application
 CMD ["python3", "spanishtutor.py"]
