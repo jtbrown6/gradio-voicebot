@@ -52,7 +52,7 @@ VOLUME /app
 Then, when you run your Docker container, you can use the `-v` option to specify the volume:
 
 ```bash
-docker run -p 5000:5000 -v /path/to/your/host/directory:/app spanishtutor
+docker run -p 8000:8000 -v /path/to/your/host/directory:/app spanishtutor
 ```
 
 This command will map `/path/to/your/host/directory` on your host machine to the `/app` directory in the Docker container. Now, any files that are created in the `/app` directory in the container (like `output.mp3` and `output.wav`) will also appear in `/path/to/your/host/directory` on your host machine, and they will persist even after the container stops.
