@@ -67,11 +67,15 @@ def transcribe(audio):
 
     return chat_transcript, 'output.wav'  # Return the path to the wav file as the second output
 
-ui = gr.Interface(fn=transcribe, inputs=gr.Audio(source="microphone", type="filepath"), outputs=["text", gr.outputs.Audio(type="filepath")]).launch()
-ui.launch()
+ui = gr.Interface(
+    fn=transcribe, 
+    inputs=gr.Audio(source="microphone", type="filepath"), 
+    outputs=["text", gr.outputs.Audio(type="filepath")]
+)
+
+ui.launch(server_name="0.0.0.0", server_port=8000)
 
 """
-URL: http://127.0.0.1:7860
 How to Suppress warnings.
 
 import warnings
